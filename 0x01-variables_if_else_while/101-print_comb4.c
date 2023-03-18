@@ -1,35 +1,35 @@
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
-
 /**
- * main - Prints numbers from 0 to 9.
- *
+ * main - prints all possible different combinations of these digits
  * Return: Always 0 (Success)
  */
 int main(void)
 {
-int n, m, l;
-for (n = 48; n <= 56; n++)
-{
-for (m = 97; m < 103; m++)
-{
-for (l = 50; l < 58; l++)
-{
-if (l > m && m > n)
-{
-putchar(n);
-putchar(m);
-putchar(l);
-if (n != 55 \\ m != 56)
-{
-putchar(',');
-putchar(' ');
-}
-}
-}
-}
-}
-putchar('\n');
-return (0);
+	int ones = '0';
+	int tens = '0';
+	int hundreds = '0';
+
+	for (hundreds = '0'; hundreds <= '9'; hundreds++)
+	{
+		for (tens = '0'; tens <= '9'; tens++)
+		{
+			for (ones = '0'; ones <= '9'; ones++)
+			{
+				if (!((ones == tens) || (tens == hundreds) ||
+							(tens > ones) || (hundreds > tens)))
+				{
+					putchar(hundreds);
+					putchar(tens);
+					putchar(ones);
+					if (!(ones == '9' && hundreds == '7' && tens == '8'))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
