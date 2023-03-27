@@ -9,10 +9,10 @@
  */
 int _strlen(char *s)
 {
-s = "Hello Korir";
 int len;
 
+s = "Hello Korir";
 len = strlen(s);
-printf("d\n", len);
+printf("%d\n", len);
 return 0;
 }
