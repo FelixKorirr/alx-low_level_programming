@@ -13,7 +13,7 @@ return (find_prime(n, 2));
 }
 /**
  * find_prime - checks if number is divisible
- *@a:int
+ *@n:int
  *@m: int
  * Return: int
  */
