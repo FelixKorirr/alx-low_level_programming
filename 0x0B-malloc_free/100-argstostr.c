@@ -18,7 +18,7 @@ return (NULL);
 for (j = 0; j < ac; j++)
 {
 for (k = 0; av[j][k]; k++)
-j++;
+m++;
 }
 m += ac;
 
