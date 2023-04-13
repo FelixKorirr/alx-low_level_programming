@@ -7,7 +7,6 @@
 * @s1: first char
 * @s2: secound char
 * @n: unsigned int
-*
 * Return: return NULL if function fails
 */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
@@ -32,7 +31,7 @@ c = 0;
 else
 {
 for (c = 0; s2[c]; ++c)
-           ;
+;
 }
 if (c > n)
 c = n;
