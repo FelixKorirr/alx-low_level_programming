@@ -19,12 +19,12 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	unsigned int x;
 
 
-	va_start(strings, n);
+	va_start(string, n);
 
 
 	for (x = 0; x < n; x++)
 	{
-		str = va_arg(strings, char *);
+		str = va_arg(string, char *);
 
 
 		if (str == NULL)
