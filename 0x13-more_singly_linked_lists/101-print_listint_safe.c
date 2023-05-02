@@ -5,10 +5,9 @@ size_t looped_listint_len(const listint_t *head);
 size_t print_listint_safe(const listint_t *head);
 
 /**
- * looped_listint_len - Counts the number of unique nodes
- * in a looped listint_t linked list.
- * @head: A pointer to the head of the listint_t to check.
- * Return: 0 if list is not looped,else,the number of unique nodes in the list
+ * looped_listint_len - Counts number of nodes in listint_t linked list.
+ * @head: pointer to the head of the listint_t
+ * Return: 0 if list is not looped else number of nodes in the list.
  */
 
 size_t looped_listint_len(const listint_t *head)
@@ -26,7 +25,7 @@ size_t looped_listint_len(const listint_t *head)
 	{
 		if (t == s)
 		{
-			t = s;
+			t = head;
 			while (t != s)
 			{
 				node++;
@@ -34,7 +33,7 @@ size_t looped_listint_len(const listint_t *head)
 				s = s->next;
 			}
 
-			t = t->next;
+			t = s->next;
 			while (t != s)
 			{
 				node++;
@@ -52,20 +51,19 @@ size_t looped_listint_len(const listint_t *head)
 }
 
 /**
- * print_listint_safe - Prints a listint_t list
- * @head: A pointer to the head of the listint_t list.
- * Return: The number of nodes in the list
+ * print_listint_safe - prints listint_t list safely
+ * @head: pointer to head of listint_t list.
+ * Return: no of nodes in the list
  */
-
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t nodes, indx = 0;
+	size_t node, indx = 0;
 
-	nodes = looped_listint_len(head);
+	node = looped_listint_len(head);
 
-	if (nodes == 0)
+	if (node == 0)
 	{
-		for (; head != NULL; nodes++)
+		for (; head != NULL; node++)
 		{
 			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
@@ -74,7 +72,7 @@ size_t print_listint_safe(const listint_t *head)
 
 	else
 	{
-		for (indx = 0; indx < nodes; indx++)
+		for (indx = 0; indx < node; indx++)
 		{
 			printf("[%p] %d\n", (void *)head, head->n);
 			head = head->next;
@@ -83,6 +81,5 @@ size_t print_listint_safe(const listint_t *head)
 		printf("-> [%p] %d\n", (void *)head, head->n);
 	}
 
-	return (nodes);
+	return (node);
 }
-
