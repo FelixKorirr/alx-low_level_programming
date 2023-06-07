@@ -4,7 +4,7 @@
  * wildcmp - Compares strings
  * @s1: pointer to first string
  * @s2: pointer to second string
- * 
+ *
  * Return: 1 if identical, otherwise 0
  * korir codes
  */

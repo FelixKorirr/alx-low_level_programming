@@ -4,14 +4,14 @@
 /**
  * is_length - function that return length of string
  * @s: string
- * 
+ *
  * Return: Length of string
  * korir codes
  */
 
 int is_length(char *s)
 {
-	if(*s == '\0')
+	if (*s == '\0')
 		return (0);
 	else
 		return (1 + is_length(s + 1));
@@ -48,4 +48,4 @@ int is_palindrome(char *s)
 	if (*s == 0)
 		return (1);
 	return (check_palindrome(s, 0, is_length(s)));
-}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+}
