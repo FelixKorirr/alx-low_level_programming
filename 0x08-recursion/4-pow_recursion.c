@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include "main.h"
 
-/*
- * factorial -function that returns value of x raised to the power of y
+/**
+ * _pow_recursion  - function that returns value of x raised to the power of y
  * @x: base value
  * @y: power
- * return: -1 if power is less than 0
+ * Return: -1 if power is less than 0
  * 1 if power is zero
  * korir codes
  */
