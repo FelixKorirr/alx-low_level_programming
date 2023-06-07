@@ -3,11 +3,11 @@
 
 /**
  * _puts_recursion - prints string
- * @s - pointer to string to be printed
+ * @s: pointer to string to be printed
  *
- * return 0
+ * Return: 0
  *
- * korir
+ * korir codes
  */
 
 void _puts_recursion(char *s)
