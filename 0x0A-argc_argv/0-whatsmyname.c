@@ -1,11 +1,18 @@
 #include <stdio.h>
-
-int main(int argc, char *argv[])
+/**
+ * main - program that prints its name, followed by a new line
+ * @argc: Argument count
+ * @argv: Argument vector
+ * Return: 0
+ * korir codes
+ */
+int main(int argc__attribute__((unused)), char *argv[])
 {
 	int i;
-	for(i = 0; i < argc; i++)
+
+	for (i = 0; i < argc; i++)
 	{
 		printf("%s\n", argv[i]);
 	}
-	return 0;
+	return (0);
 }
