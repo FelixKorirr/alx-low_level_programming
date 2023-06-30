@@ -1,15 +1,11 @@
 #include "lists.h"
 
-/**
- * korir codes
- */
-
 void first(void) __attribute__ ((constructor));
 
 /**
- * first - prints a sentence before
- * main
+ * first - prints a sentence before main
  * function is executed
+ * korir codes
  */
 
 void first(void)
