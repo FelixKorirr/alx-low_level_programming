@@ -1,7 +1,8 @@
+#include <stdio.h>
 #include "lists.h"
 
 /**
- * print_list - prints all the elements of a linked list
+ * print_list - prints all the elements of a link list
  * @h: pointer to list_t list
  * Return: number of nodes
  * korir codes
