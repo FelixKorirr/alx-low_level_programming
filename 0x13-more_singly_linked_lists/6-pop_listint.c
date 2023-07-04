@@ -1,4 +1,4 @@
-include "lists.h"
+#include "lists.h"
 
 /**
  * pop_listint - deletes the head node of a listint list
@@ -16,10 +16,10 @@ int pop_listint(listint_t **head)
 		return (0);
 	}
 
-	num = (*head)->n;
+	y = (*head)->n;
 	x = (*head)->next;
 	free(*head);
-	*head = temp;
+	*head = x;
 
 	return (y);
 }
