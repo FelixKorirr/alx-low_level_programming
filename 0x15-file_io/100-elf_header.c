@@ -55,7 +55,7 @@ void magic_num(unsigned char *el)
  * @el: pointer to array with the ELF class.
  * korir codes
  */
-void print_class(unsigned char *el)
+void class_display(unsigned char *el)
 {
 	printf("Class:");
 
@@ -76,7 +76,7 @@ void print_class(unsigned char *el)
 }
 
 /**
- * print_data - Prints the data of an ELF header.
+ * data_display- Prints the data of an ELF header.
  * @el: A pointer to an array containing the ELF class.
  */
 void data_display(unsigned char *el)
