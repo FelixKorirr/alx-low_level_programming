@@ -1,31 +1,38 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_delete - Deletes hash table.
- * @ht: pointer to a hash table
+ * hash_table_delete - frees the hash table
+ * @ht: pointer to hash table
  * korir codes
  */
+
 void hash_table_delete(hash_table_t *ht)
 {
-	hash_table_t *head = ht;
-	hash_node_t *new_node, *current;
+	hash_node_t *newnode, *current;
 	unsigned long int x;
+
+	if (!ht)
+
+		return;
 
 	for (x = 0; x < ht->size; x++)
 	{
-		if (ht->array[x] != NULL)
+		newnode = ht->array[x];
+		while (newnode)
 		{
-			new_node = ht->array[x];
-			while (new_node != NULL)
+			current = newnode;
+			newnode = newnode->next;
+			if (current->key)
 			{
-				current = new_node->next;
-				free(new_node->key);
-				free(new_node->value);
-				free(node);
-				new_node = current;
+				free(current->key);
 			}
+			if (current->value)
+			{
+				free(current->value);
+			}
+			free(current);
 		}
 	}
-	free(head->array);
-	free(head);
+	free(ht->array);
+	free(ht);
 }
